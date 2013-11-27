@@ -178,6 +178,12 @@ An optional `options` object can be passed as the parameter directly preceding t
       </td>
     </tr>
     <tr>
+      <th>resourcesToIgnore</th>
+      <td>[]</td>
+      <td>Array of string url request to cancel. Useful for keeping analytics from becoming polluted.
+      </td>
+    </tr>
+    <tr>
       <th>cookies</th>
       <td>[]</td>
         <td>Array of cookies to add to the page. See https://github.com/ariya/phantomjs/wiki/API-Reference#wiki-cookie

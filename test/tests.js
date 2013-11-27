@@ -323,3 +323,24 @@ describe('Handling the cookies option', function() {
     });
   });
 });
+
+describe('Handling the resourcesToIgnore option', function() {
+  it('does not break page rendering', function(done) {
+    var options = {
+      resourcesToIgnore: [
+				"www.google-analytics.com"
+      ]
+    };
+
+    this.timeout(20000);
+
+    webshot('google.com', testFile, function(err) {
+      if (err) return done(err);
+
+      fs.exists(testFile, function(exists) {
+        exists.should.equal(true);
+        done();
+      });
+    });
+  });
+});
